@@ -1,48 +1,65 @@
 <div class="main-wrapper">
 
-      <div class="graph-space">
-       <%= link_to "新規投稿", new_tweet_path %>
+  <div class="graph-space">
+    <%= link_to "新規投稿", new_tweet_path %>
+  </div>
+
+  <div class="card-space">
+    <% @tweets.each_slice(3) do |tweet1,tweet2,tweet3| %>
+      <div class="array-space">
+      
+        <% if tweet1 != nil %>
+          <div class="card">
+            <div class="skip-time-space">
+              <label>・time</label>
+              <div class="skip-time">15:00~16:00</div>
+            </div>
+            <div class="text-space">
+              <label>・何をしていた</label>
+              <div class="what-skip">
+                  <%= tweet1.content %>
+              </div>
+              <label>・本来何をすべきだった</label>
+              <div class="to-do">いいい</div>
+            </div>
+          </div>
+        <% end %>
+  
+        <% if tweet2 != nil %>
+          <div class="card">
+            <div class="skip-time-space">
+              <label>・time</label>
+              <div class="skip-time">15:00~16:00</div>
+            </div>
+            <div class="text-space">
+              <label>・何をしていた</label>
+              <div class="what-skip">
+                  <%= tweet2.content %>
+              </div>
+              <label>・本来何をすべきだった</label>
+              <div class="to-do">いいい</div>
+            </div>
+          </div>
+        <% end %>
+  
+        <% if tweet3 != nil %>
+          <div class="card">
+            <div class="skip-time-space">
+              <label>・time</label>
+              <div class="skip-time">15:00~16:00</div>
+            </div>
+            <div class="text-space">
+              <label>・何をしていた</label>
+              <div class="what-skip">
+                  <%= tweet3.content %>
+              </div>
+              <label>・本来何をすべきだった</label>
+              <div class="to-do">いいい</div>
+            </div>
+          </div>
+        <% end %>
+  
       </div>
-
-      <div class="card-space">
-        <div class="card">
-          <div class="skip-time-space">
-            <label>・time</label>
-            <div class="skip-time">15:00~16:00</div>
-          </div>
-          <div class="text-space">
-            <label>・何をしていた</label>
-            <div class="what-skip">あああ</div>
-            <label>・本来何をすべきだった</label>
-            <div class="to-do">いいい</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="skip-time-space">
-            <label>・time</label>
-            <div class="skip-time">15:00~16:00</div>
-          </div>
-          <div class="text-space">
-            <label>・何をしていた</label>
-            <div class="what-skip">あああ</div>
-            <label>・本来何をすべきだった</label>
-            <div class="to-do">いいい</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="skip-time-space">
-            <label>・time</label>
-            <div class="skip-time">15:00~16:00</div>
-          </div>
-          <div class="text-space">
-            <label>・何をしていた</label>
-            <div class="what-skip">あああ</div>
-            <label>・本来何をすべきだった</label>
-            <div class="to-do">いいい</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
+    <% end %>
+  </div>
+</div>
