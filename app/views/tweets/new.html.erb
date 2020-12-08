@@ -1,0 +1,5 @@
+<h1>これは新規投稿ページです</h1>
+<%= form_with model: @tweet, local: true do |f| %>
+  <%= f.text_field :content, placeholder: "ここに投稿内容を入れる" %>
+  <%= f.submit "投稿" %>
+<% end %>
