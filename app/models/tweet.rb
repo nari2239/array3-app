@@ -1,3 +1,3 @@
 class Tweet < ApplicationRecord
-  validates :content, null: false
+  validates :content, presence: true
 end
