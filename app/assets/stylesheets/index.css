@@ -75,5 +75,25 @@ body {
   margin: 8px 0;
 }
 
+.update-btns {
+  height: 30px;
+  margin: 20px 0 0 10px;
+  /* background-color: chartreuse; */
+  display: flex;
+  padding-left: 383px;
+}
+
+.edit-link {
+  width: 300px;
+  margin-right: 20px;
+  color: red;
+}
+
+.delete-link {
+  margin-right: 20px;
+  color: red;
+}
+
+
 
 /* 以上カード */

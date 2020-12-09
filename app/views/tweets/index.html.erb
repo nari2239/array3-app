@@ -22,6 +22,14 @@
               <label>・本来何をすべきだった</label>
               <div class="to-do">いいい</div>
             </div>
+            <div class="update-btns">
+              <%= link_to root_path, method: :get, class:"edit-link" do %>
+                <i class="far fa-edit fa-2x"></i>
+              <% end %>
+              <%= link_to root_path, method: :get, class:"delete-link" do %>
+                <i class="far fa-trash-alt fa-2x"></i>
+              <% end %>
+            </div>
           </div>
         <% end %>
   
@@ -39,9 +47,17 @@
               <label>・本来何をすべきだった</label>
               <div class="to-do">いいい</div>
             </div>
+            <div class="update-btns">
+              <%= link_to root_path, method: :get, class:"edit-link" do %>
+                <i class="far fa-edit"></i>
+              <% end %>
+              <%= link_to root_path, method: :get, class:"delete-link" do %>
+                <i class="far fa-trash-alt"></i>
+              <% end %>
+            </div>
           </div>
         <% end %>
-  
+
         <% if tweet3 != nil %>
           <div class="card">
             <div class="skip-time-space">
@@ -55,6 +71,14 @@
               </div>
               <label>・本来何をすべきだった</label>
               <div class="to-do">いいい</div>
+            </div>
+            <div class="update-btns">
+              <%= link_to root_path, method: :get, class:"edit-link" do %>
+                <i class="far fa-edit fa-2x"></i>
+              <% end %>
+              <%= link_to root_path, method: :get, class:"delete-link" do %>
+                <i class="far fa-trash-alt fa-2x"></i>
+              <% end %>
             </div>
           </div>
         <% end %>
