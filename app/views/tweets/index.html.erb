@@ -11,15 +11,15 @@
         <% if tweet1 != nil %>
           <div class="card">
             <div class="skip-time-space">
-              <label>・time</label>
-              <div class="skip-time">15:00~16:00</div>
+              <label class="question-rabel">どのくらいサボった？</label>
+              <div class="skip-time">#{○○}分</div>
             </div>
             <div class="text-space">
-              <label>・何をしていた</label>
+              <label class="question-rabel">何してた？</label>
               <div class="what-skip">
                   <%= tweet1.content %>
               </div>
-              <label>・本来何をすべきだった</label>
+              <label class="question-rabel">何すべきだった？</label>
               <div class="to-do">いいい</div>
             </div>
             <div class="update-btns">
@@ -36,40 +36,15 @@
         <% if tweet2 != nil %>
           <div class="card">
             <div class="skip-time-space">
-              <label>・time</label>
-              <div class="skip-time">15:00~16:00</div>
+              <label class="question-rabel">どのくらいサボった？</label>
+              <div class="skip-time">#{○○}分</div>
             </div>
             <div class="text-space">
-              <label>・何をしていた</label>
+              <label class="question-rabel">何してた？</label>
               <div class="what-skip">
                   <%= tweet2.content %>
               </div>
-              <label>・本来何をすべきだった</label>
-              <div class="to-do">いいい</div>
-            </div>
-            <div class="update-btns">
-              <%= link_to root_path, method: :get, class:"edit-link" do %>
-                <i class="far fa-edit"></i>
-              <% end %>
-              <%= link_to root_path, method: :get, class:"delete-link" do %>
-                <i class="far fa-trash-alt"></i>
-              <% end %>
-            </div>
-          </div>
-        <% end %>
-
-        <% if tweet3 != nil %>
-          <div class="card">
-            <div class="skip-time-space">
-              <label>・time</label>
-              <div class="skip-time">15:00~16:00</div>
-            </div>
-            <div class="text-space">
-              <label>・何をしていた</label>
-              <div class="what-skip">
-                  <%= tweet3.content %>
-              </div>
-              <label>・本来何をすべきだった</label>
+              <label class="question-rabel">何すべきだった？</label>
               <div class="to-do">いいい</div>
             </div>
             <div class="update-btns">
@@ -82,7 +57,32 @@
             </div>
           </div>
         <% end %>
-  
+
+        <% if tweet3 != nil %>
+          <div class="card">
+            <div class="skip-time-space">
+              <label class="question-rabel">どのくらいサボった？</label>
+              <div class="skip-time">#{○○}分</div>
+            </div>
+            <div class="text-space">
+              <label class="question-rabel">何してた？</label>
+              <div class="what-skip">
+                  <%= tweet3.content %>
+              </div>
+              <label class="question-rabel">何すべきだった？</label>
+              <div class="to-do">いいい</div>
+            </div>
+            <div class="update-btns">
+              <%= link_to root_path, method: :get, class:"edit-link" do %>
+                <i class="far fa-edit fa-2x"></i>
+              <% end %>
+              <%= link_to root_path, method: :get, class:"delete-link" do %>
+                <i class="far fa-trash-alt fa-2x"></i>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+
       </div>
     <% end %>
   </div>
