@@ -8,6 +8,9 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require('jquery')
+require('../show')
+require('../colorchange')
+require('../colorchange2')
 
 import '@fortawesome/fontawesome-free/js/all';
 
