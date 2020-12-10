@@ -87,3 +87,31 @@
     <% end %>
   </div>
 </div>
+
+<div class="new-record-btn">
+  <span class="fa-stack fa-2x">
+    <i class="fas fa-circle fa-stack-2x" style="color: #FF3399;"></i>
+    <i class="fas fa-plus fa-stack-1x" style="color: white;"></i>
+  </span>
+</div>
+
+<%# モーダル部分 %>
+<div class="new-record-modal-wrapper" id="new-record-modal">
+  <div class="modal">
+    <div id="new-record-form">
+      <div class="modal-title">記録追加</div>
+        <form>
+          <div class="modal-input-wrapper">
+            <input class="modal-input-space" type="number" placeholder="どのくらいサボった？ 半角数字で記入 (分単位)">
+            <input class="modal-input-space" type="text" placeholder="何してた？">
+            <input class="modal-input-space" type="text" placeholder="何すべきだった？">
+          </div>
+          <div class="save-cancel-btns">
+            <div class="cancel-btn">CANCEL</div>
+            <input class="modal-submit" type="submit" value="SAVE">
+          </div>
+        </form>
+    </div>
+  </div>
+</div>
+<%# モーダル部分 %>
