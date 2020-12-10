@@ -100,17 +100,21 @@
   <div class="modal">
     <div id="new-record-form">
       <div class="modal-title">記録追加</div>
-        <form>
+        <%= form_with url:  tweets_path, method: :post, id: "form" do |f| %>
           <div class="modal-input-wrapper">
-            <input class="modal-input-space" type="number" placeholder="どのくらいサボった？ 半角数字で記入 (分単位)">
-            <input class="modal-input-space" type="text" placeholder="何してた？">
-            <input class="modal-input-space" type="text" placeholder="何すべきだった？">
+            <%# <input class="modal-input-space" type="number" placeholder="どのくらいサボった？ 半角数字で記入 (分単位)"> %>
+            <%= f.number_field :hoge, placeholder: "どのくらいサボった？ 半角数字で記入 (分単位)", class: "modal-input-space" %>
+            <%# <input class="modal-input-space" type="text" placeholder="何してた？"> %>
+            <%= f.text_area :content, placeholder: "何してた？", class: "modal-input-space" %>
+            <%# <input class="modal-input-space" type="text" placeholder="何すべきだった？"> %>
+            <%= f.text_area :hoge, placeholder: "何すべきだった？", class: "modal-input-space" %>
           </div>
           <div class="save-cancel-btns">
             <div class="cancel-btn">CANCEL</div>
-            <input class="modal-submit" type="submit" value="SAVE">
+            <%# <input class="modal-submit" type="submit" value="SAVE"> %>
+            <%= f.submit 'SAVE', id: "submit", class: "modal-submit" %>
           </div>
-        </form>
+        <% end %>
     </div>
   </div>
 </div>
