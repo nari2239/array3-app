@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
   def index
     @tweets = Tweet.all.order("updated_at DESC")
+    @tweet = Tweet.new(content: params[:content])
   end
 
   def new
@@ -8,12 +9,13 @@ class TweetsController < ApplicationController
   end
 
   def create
-    @tweet = Tweet.new(tweet_params)
+    @tweet = Tweet.new(content: params[:content])
+    # binding.pry
     if @tweet.valid?
       @tweet.save
       redirect_to root_path
     else
-      render :new
+      render json: { messages: @tweet.errors.full_messages }
     end
   end
 
